@@ -1,7 +1,86 @@
-#header {
-    
+/* Font */
+@font-face {
+    font-family: AlexBrush;
+    src: url("./assets/word-fonts/AlexBrush-Regular.ttf")
 }
-#header .background-img {
-    width: 100%;
+
+@font-face {
+    font-family: SF_Burlington_Script;
+    src: url("/assets/word-fonts/SF_Burlington_Script.ttf");
+}
+
+@font-face {
+    font-family: Blokletters-Balpen;
+    src: url("/assets/word-fonts/Blokletters-Balpen.ttf");
+}
+
+/* Common */
+body, html {
     height: 100%;
+}
+
+#content {
+    position: relative;
+    background: url("./assets/heart.jpg") center / cover no-repeat;
+    height: 100%;
+    width: 100%;
+    text-align: center !important;
+    z-index: 1;
+}
+
+#content .click-button {
+    position: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    background-color: yellow;
+    padding: 10px 20px;
+    font-size: 50px;
+    font-family: Blokletters-Balpen;
+}
+
+#content .click-button:hover {
+    opacity: 0.8;
+    cursor: grab;
+}
+
+#content .click-button .button-icon {
+    padding-left: 5px;
+}
+
+/* Curtain */
+.curtain-wrapper {
+    position: absolute;
+    background: #333 center / cover no-repeat;
+    height: 102%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.curtain-left,
+.curtain-right {
+    transform: translateX(0);
+}
+
+.curtain {
+    background-color: red;
+    width: 50%;
+    height: 101%;
+    float: left;
+    position: relative;
+    z-index: 0;
+    transform: all 1s ease-in;
+}
+
+@keyframes ease-in {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
