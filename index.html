@@ -20,12 +20,15 @@
             rel="stylesheet">
         <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/fontawesome-free-6.2.1-web/css/all.min.css">
+        <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
     </head>
 
     <body>
         <!-- CLICK BUTTON -->
         <div class="content text-center z1">
-            <button class="click-button">Hello<i class="ti-heart button-icon"></i></button>
+            <button class="click-button">Hello Bae<i class="ti-heart button-icon"></i></button>
         </div>
         <!-- CURTAIN -->
         <div class="curtain-wrapper">
@@ -40,14 +43,15 @@
         <div class="container z0 close">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center text-light my-5 hover-text"><strong>Hover the
-                            box</strong></h3>
+                    <h3 class="text-center text-light my-5 hover-text text-uppercase"><strong>Hover the
+                            gift and click the image</strong></h3>
                 </div>
                 <div class="col-12 mt-5 d-flex justify-content-center">
                     <div class="box">
                         <div class="box-body">
+                            <!-- <a href="/music.html"><img src="./assets/img/couple-3.jpg" class="img"></a> -->
                             <img class="img" src="/assets/img/couple-3.jpg" onplay="music()" >
-                            <audio src="#" id="audio"></audio>
+                            <audio src="./assets/ music/golden-hour.mp3" id="audio"></audio>
                             <div class="box-lid">
                                 <div class="box-bowtie"></div>
                             </div>
@@ -56,6 +60,17 @@
                 </div>
             </div>
         </div>
+        <!-- ILOVEYOU -->
+        <div class="inf close">
+            <div class="love-you ">
+                <span>I</span>
+                <span class="big">Love</span>
+                <span class="small ti ti-heart"></span>
+                <span class="big">You</span>
+                <span class="small u">U</span>
+            </div>
+
+        </div>
         <!-- SCRIPT -->
         <script>
         const curtainLeft = document.querySelector('.curtain-left');
@@ -63,7 +78,7 @@
 
         const content = document.querySelector('.content');
         const button = document.querySelector('.click-button');
-
+        const loveYou = document.querySelector('.inf');
         const box = document.querySelector('.container');
 
         //BOX AND CURTAIN EVENT
@@ -90,19 +105,26 @@
             setTimeout(displayBox, 3000);
 
         }
-
+        function closeContainer () {
+            box.classList.remove('open');
+            box.classList.remove('z1');
+            box.classList.add('close');
+            loveYou.classList.remove('close');
+            loveYou.classList.add('open-block');
+            loveYou.classList.add('z1');
+        }
         button.addEventListener('click', closeCurtain);
         button.addEventListener('click', displayCurtain);
 
         // PLAY MUSIC ON CLICKED IMAGE
         document.querySelector('img').addEventListener('click', function() {
             document.getElementById("audio").play();
+            closeContainer();
         });
     </script>
-        <script
+        <!-- <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> -->
     </body>
 
 </html>
