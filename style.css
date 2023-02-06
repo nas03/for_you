@@ -42,7 +42,7 @@ body, html {
 /* CLICK BUTTON */
 .content {
     position: absolute;
-    background: url("./assets/img/heart.jpg") center / cover no-repeat;
+    background: url("./img/heart.jpg") center / cover no-repeat;
     height: 100%;
     width: 100%;
     top: 0;
