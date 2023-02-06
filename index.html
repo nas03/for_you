@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <meta charset="UTF-8" lang="vi">
+        <meta charset="UTF-8" lang="en">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Love u</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet"
             href="./assets/fontawesome-free-6.2.1-web/css/fontawesome.css">
@@ -13,21 +19,88 @@
         <link href="./assets/fontawesome-free-6.2.1-web/css/solid.css"
             rel="stylesheet">
         <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     </head>
+
     <body>
-        
-        <div id="content">
-            <button class="click-button" onclick="closeCurtain()">Hello Bae<i
-                    class="ti-heart button-icon"></i></button>
+        <!-- CLICK BUTTON -->
+        <div class="content text-center z1">
+            <button class="click-button">Hello<i class="ti-heart button-icon"></i></button>
         </div>
+        <!-- CURTAIN -->
         <div class="curtain-wrapper">
-            <div class="curtain curtain-left hidden">
+            <div class="curtain curtain-left z0">
 
             </div>
-            <div class="curtain curtain-right hidden">
+            <div class="curtain curtain-right z0">
 
             </div>
         </div>
+        <!-- GIFT BOX -->
+        <div class="container z0 close">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center text-light my-5 hover-text"><strong>Hover the
+                            box</strong></h3>
+                </div>
+                <div class="col-12 mt-5 d-flex justify-content-center">
+                    <div class="box">
+                        <div class="box-body">
+                            <img class="img" src="/assets/img/couple-3.jpg" onplay="music()" >
+                            <audio src="#" id="audio"></audio>
+                            <div class="box-lid">
+                                <div class="box-bowtie"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SCRIPT -->
+        <script>
+        const curtainLeft = document.querySelector('.curtain-left');
+        const curtainRight = document.querySelector('.curtain-right');
 
+        const content = document.querySelector('.content');
+        const button = document.querySelector('.click-button');
+
+        const box = document.querySelector('.container');
+
+        function displayBox() {
+            curtainLeft.classList.remove('open');
+            curtainRight.classList.remove('open');
+            curtainLeft.classList.add('close');
+            curtainRight.classList.add('close');
+            box.classList.remove('z0');
+            box.classList.remove('close');
+            box.classList.add('open');
+            box.classList.add('z1');
+        }
+
+        function closeCurtain() {
+            content.classList.remove('z1')
+            content.classList.add('close');
+        }
+        function displayCurtain() {
+            curtainLeft.classList.add('open');
+            curtainRight.classList.add('open');
+            curtainLeft.classList.add('z0');
+            curtainRight.classList.add('z0');
+            setTimeout(displayBox, 3000);
+
+        }
+
+        button.addEventListener('click', closeCurtain);
+        button.addEventListener('click', displayCurtain);
+
+        document.querySelector('img').addEventListener('click', function() {
+            document.getElementById("audio").play();
+        });
+    </script>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
     </body>
+
 </html>
