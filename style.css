@@ -1,17 +1,17 @@
 /* FONT */
 @font-face {
     font-family: AlexBrush;
-    src: url("./word-fonts/AlexBrush-Regular.ttf")
+    src: url('./word-fonts/AlexBrush-Regular.ttf')
 }
 
 @font-face {
     font-family: SF_Burlington_Script;
-    src: url("./word-fonts/SF_Burlington_Script.ttf");
+    src: url('./word-fonts/SF_Burlington_Script.ttf');
 }
 
 @font-face {
     font-family: Blokletters-Balpen;
-    src: url("./word-fonts/Blokletters-Balpen.ttf");
+    src: url('./word-fonts/Blokletters-Balpen.ttf');
 }
 
 /* QUICK */
