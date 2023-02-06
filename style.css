@@ -1,4 +1,4 @@
-/* Font */
+/* FONT */
 @font-face {
     font-family: AlexBrush;
     src: url("./assets/word-fonts/AlexBrush-Regular.ttf")
@@ -14,7 +14,7 @@
     src: url("/assets/word-fonts/Blokletters-Balpen.ttf");
 }
 
-/* Quick */
+/* QUICK */
 .z1 {
     z-index: 1 !important;
 }
@@ -33,11 +33,11 @@
     display: none !important;
 }
 
-/* Common */
+/* COMMON */
 body, html {
     height: 100%;
 }
-
+/* CLICK BUTTON */
 .content {
     position: absolute;
     background: url("./assets/img/heart.jpg") center / cover no-repeat;
@@ -73,11 +73,7 @@ body, html {
     padding-left: 5px;
 }
 
-/* Curtain */
-.curtain-wrapper {}
-
-
-.curtain-right {}
+/* CURTAIN */
 
 .curtain {
     position: absolute;
@@ -441,7 +437,7 @@ body, html {
         opacity: 1;
     }
 }
-
+/* HOVER TEXT */
 .container .row .hover-text {
     text-align: center !important;
     position: absolute;

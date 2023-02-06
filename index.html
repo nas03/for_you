@@ -66,6 +66,7 @@
 
         const box = document.querySelector('.container');
 
+        //BOX AND CURTAIN EVENT
         function displayBox() {
             curtainLeft.classList.remove('open');
             curtainRight.classList.remove('open');
@@ -93,6 +94,7 @@
         button.addEventListener('click', closeCurtain);
         button.addEventListener('click', displayCurtain);
 
+        // PLAY MUSIC ON CLICKED IMAGE
         document.querySelector('img').addEventListener('click', function() {
             document.getElementById("audio").play();
         });
