@@ -133,9 +133,11 @@ body, html {
     left: 0 ;
     right: 0 ;
    max-width: 1400px !important;
+   
 }
 
 .box {
+    
     animation: box-fade-in ease 2s;
     position: absolute;
     text-align: center;
@@ -451,7 +453,7 @@ body, html {
     font-family: Blokletters-Balpen;
     position: absolute;
     left: 50%;
-    top: 5%;
+    top: -0%;
     
     font-weight: 800;
     color: #000 !important;
